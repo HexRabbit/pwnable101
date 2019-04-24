@@ -1,14 +1,16 @@
 #include <stdio.h>
-int main() {
-  int target = 0;
-  char vuln[0x10];
+#include <stdlib.h>
+#include <unistd.h>
 
-  scanf("%s", vuln);
+void vuln()
+{
+  system("/bin/cat flag");
+}
 
-  if(target)
-    puts("Hello pwn");
-  else
-    puts("You can try again");
-
+int main()
+{
+  char lastword[20];
+  puts("Get the flag plz :)");
+  scanf("%s", lastword);
   return 0;
 }
